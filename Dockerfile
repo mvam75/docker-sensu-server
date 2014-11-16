@@ -23,7 +23,6 @@ ADD ./files/rabbitmq.config /etc/rabbitmq/
 RUN rabbitmq-plugins enable rabbitmq_management
 
 RUN wget -q http://dl.bintray.com/palourde/uchiwa/uchiwa_0.3.2-1_amd64.deb && dpkg -i uchiwa_0.3.2-1_amd64.deb
-ADD ./files/uchiwa.json /etc/sensu/
 
 COPY ./files/supervisord.conf /etc/supervisord.conf
 
